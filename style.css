@@ -105,8 +105,9 @@ body {
     font-family: "Comic Sans MS";
 }
 
-#p2 h3{
+#p2 p{
   font-size: 2.2vw;
+  font-weight: bold;
 }
 
 #ul{
@@ -144,8 +145,13 @@ body {
   font-family: "Comic Sans MS";
 }
 
-#p3 h3{
+#p3 p{
   font-size: 2.2vw;
+  font-weight: bold;
+}
+
+#p3 h4{
+    font-weight: normal;
 }
 
 #ul_p3{
@@ -164,6 +170,7 @@ body {
     position: absolute;
     font-size: 1vw;
     border-radius: 20px;
+    font-weight: bold;
 }
 
 #nav {
@@ -268,7 +275,7 @@ body {
   #p2 {
     top: 130%;
   }
-  #p2 h3{
+  #p2 p{
     font-size: 3vw;
   }
 
@@ -288,7 +295,7 @@ body {
     font-size: 2.8vw;
   }
 
-  #p3 h3{
+  #p3 p{
     font-size: 3vw;
   }
 
@@ -333,11 +340,11 @@ body {
   }
 
 
-  #p2 h3{
+  #p2 p{
     font-size: 5vw;
   }
 
-  #p3 h3{
+  #p3 p{
     font-size: 5vw;
   }
 
