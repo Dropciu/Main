@@ -84,6 +84,13 @@ body {
     margin: 3%;
 }
 
+#p111 h1{
+    margin-bottom: 0;
+}
+#p111 h2{
+    margin-top: 0;
+}
+
 #p2{
     top: 100%;
     width: 79%;
@@ -209,7 +216,6 @@ body {
   }
 }
 
-
 @media only all and (min-width:1200px){
   #bg img {
     min-height: 100%;
@@ -221,6 +227,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+  }
+  
+  #p111 strong {
+      display: inline-block;
   }
 }
 
