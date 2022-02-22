@@ -1,0 +1,13 @@
+{
+  "name": "Kacper Drobik",
+  "short_name": "Kacper Drobik",
+  "description": "Kacper Drobik- programista i chodziarz",
+  "lang": "pl-PL",
+  "start_url": "https://Drobik.site",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://drobik.site/img/favicon_3.ico"
+    }
+  ]
+}

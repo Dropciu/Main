@@ -1,6 +1,10 @@
 $("html, body").animate({ scrollTop: 0, scrollLeft: 0 }, "slow");
 
 
+if (document.location.protocol != "https:") {
+    document.location = document.URL.replace(/^http:/i, "https:"); 
+};
+
 
 window.onload = (event) => {
 
