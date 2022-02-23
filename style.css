@@ -95,8 +95,10 @@ body {
 #invisible_h3{
     z-index: -10;
     position: absolute;
-    top:-20%;
+    width: 30%;
+    left:-35%;
 }
+
 
 #p2{
     top: 100%;
