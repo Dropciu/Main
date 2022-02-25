@@ -1,19 +1,39 @@
 $("html, body").animate({ scrollTop: 0, scrollLeft: 0 }, "slow");
 
 
-if (document.location.protocol != "https:") {
+
+
+if(window.location.protocol == "http"){
     document.location = document.URL.replace(/^http:/i, "https:"); 
-};
+}
+
+
+if(window.innerWidth < 1200){
+
+    document.querySelector(':root').style.setProperty('--zmp', (-(1200 - window.innerWidth / 1)).toString() + "px" );
+
+    document.querySelector(':root').style.setProperty('--zmp2', (-(1200 - window.innerWidth / 0.7)).toString() + "px" );
+
+    document.querySelector(':root').style.setProperty('--zmp3', (-(1200 - window.innerWidth / 0.6)).toString() + "px" );
+
+    document.querySelector(':root').style.setProperty('--zmp4', (-(1200 - window.innerWidth / 0.5)).toString() + "px" );
+
+    document.querySelector(':root').style.setProperty('--zmp5', (-(1200 - window.innerWidth)).toString() + "px" );
+
+    document.querySelector(':root').style.setProperty('--zmp6', (-(1200 - window.innerWidth / 0.55)).toString() + "px" );
+
+}
+
+
+
 
 
 window.onload = (event) => {
 
 
-
     var slideIndex = 0;
 
     showSlides();
-
 
 
     function showSlides() {
@@ -42,121 +62,57 @@ window.onload = (event) => {
 
 
 
+    if(!((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || window.innerWidth < 1200)){
+        document.getElementById("nav").innerHTML = "<p id='nav1'>⇣ Do repozytoriów ⇣</p><p id='nav2'>⇣ Do osiągnięć ⇣</p>";
 
 
-    document.getElementById("nav1").addEventListener('click',
+        document.getElementById("nav1").addEventListener('click',
+        function(event) {
 
-    function(event) {
+            window.scroll({
 
-        window.scroll({
+                top: window.innerHeight, 
 
-            top: window.innerHeight, 
+                left: 0, 
 
-            left: 0, 
+                behavior: 'smooth'
 
-            behavior: 'smooth'
+            });
 
-          });
+            document.getElementById("nav").remove();
 
-        document.getElementById("nav").remove();
-
-    }, false);
-
-
-
-
+        }, false);
 
 
 
-    document.getElementById("nav2").addEventListener('click',
+        document.getElementById("nav2").addEventListener('click',
+        function(event) {
 
-    function(event) {
+            window.scroll({
 
-        window.scroll({
+                top: 2 * window.innerHeight, 
 
-            top: 2 * window.innerHeight, 
+                left: 0, 
 
-            left: 0, 
+                behavior: 'smooth'
 
-            behavior: 'smooth'
+            });
 
-          });
+            document.getElementById("nav").remove();
 
-        document.getElementById("nav").remove();
-
-    }, false);
-
+        }, false);
 
 
 
-
-    
-
-    if(window.innerWidth < 1200){
-
-        document.querySelector(':root').style.setProperty('--zmp', (-(1200 - window.innerWidth / 1)).toString() + "px" );
-
-        document.querySelector(':root').style.setProperty('--zmp2', (-(1200 - window.innerWidth / 0.7)).toString() + "px" );
-
-        document.querySelector(':root').style.setProperty('--zmp3', (-(1200 - window.innerWidth / 0.6)).toString() + "px" );
-
-        document.querySelector(':root').style.setProperty('--zmp4', (-(1200 - window.innerWidth / 0.5)).toString() + "px" );
-
-        document.querySelector(':root').style.setProperty('--zmp5', (-(1200 - window.innerWidth)).toString() + "px" );
-
-        document.querySelector(':root').style.setProperty('--zmp6', (-(1200 - window.innerWidth / 0.55)).toString() + "px" );
-
-    }
-
-    
-
-
-
-
-
-    if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || window.innerWidth < 1200){
-
-        document.getElementById("nav").remove();
-
-    }
-
-    else{
-
-        var interval = setInterval(() => {
-
+        window.addEventListener("scroll", function(){
             if(window.pageYOffset > window.innerWidth / 10){
-
                 document.getElementById("nav").remove();
-
-                clearInterval(interval);
-
-            }    
-
-        }, 300);
+            }
+        },);
 
     }
 
-
-
-
-
-    setInterval(() => {
-
-        document.title = "Kacper Drobik- Webmaster";
-
-        setTimeout(() => {
-
-            document.title = "Programista i chodziarz";
-
-        }, 2500);
-
-        setTimeout(() => {
-
-            document.title = "Kacper Drobik- Projekty i osiągnięcia";
-
-        }, 5000);
-
-    }, 12000);
+    
 
 };
 
