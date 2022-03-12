@@ -2,6 +2,15 @@ $("html, body").animate({ scrollTop: 0, scrollLeft: 0 }, "slow");
 
 
 
+document.body.setAttribute("ondragstart", "return false");
+document.body.setAttribute("ondrag", "return false");
+document.body.setAttribute("oncontextmenu", "return false");
+document.body.setAttribute("onselectstart", "return false");
+document.body.setAttribute("onselect", "return false");
+document.body.setAttribute("oncopy", "return false");
+
+
+
 
 if(window.location.protocol == "http"){
     document.location = document.URL.replace(/^http:/i, "https:"); 
