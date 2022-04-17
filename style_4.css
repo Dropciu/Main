@@ -38,15 +38,9 @@ body {
 #bg img {
     vertical-align: middle;
     object-fit: cover;
-    min-height: 100%;
-    min-width: 1024px;
-    
-    width: 100%;
-    height: auto;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 100%;
+    right: 25%;
+    min-width: 100%;
 }
 
 .slideshow-container {
@@ -88,6 +82,7 @@ body {
     font-family: "TradeWinds-Regular";
     letter-spacing: 0.3vw;
     border-radius: 20px;
+    margin-top: 85%;
 }
 
 #p1 img {
@@ -105,9 +100,6 @@ body {
 }
 #p111 h2{
     margin-top: 0;
-}
-#p111 strong {
-  display: inline-block;
 }
 
 
@@ -134,15 +126,15 @@ body {
 }
 
 #p2 p{
-  font-size: 2.2vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 
 #ul{
-    width: 50%;
-    margin-left: 25%;
+    width: 80%;
+    margin-left: 10%;
     text-align: left;
-    font-size: 2.4vw;
+    font-size: 4vw;
     align-items:center;
 }
 
@@ -153,7 +145,8 @@ body {
 #ul a {
     text-decoration: none;
 }
-#ul a:hover {
+
+#ul a:active {
   background-color: #ffff00c0;
   color: #ff0000;
   padding: 0.7vw;
@@ -162,6 +155,8 @@ body {
 
 #ul img{
   margin-right: 2%;
+  width: 20%;
+  margin: 5%;
   vertical-align: middle;
 }
 
@@ -180,37 +175,19 @@ body {
   font-family: "Comic Sans MS";
 }
 
+#p3 li{
+  margin-bottom: 2%;
+  font-size: 3.5vw;
+}
+
 #p3 p{
-  font-size: 2.2vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 
 #p3 h4{
     font-weight: normal;
-    position: relative;
-    width: -moz-fit-content;
-    width: fit-content;
 }
-#p3 h4::after{
-  font-weight: normal;
-  content: '';
-  position: absolute;
-  width: 102%;
-  margin-left: -1%;
-  transform: scaleX(0);
-  height: 0.2vw;
-  bottom: 0;
-  left: 0;
-  background-color: #fff423;
-  transform-origin: bottom right;
-  transition: transform 0.35s ease-out;
-  opacity: 0.8;
-}
-#p3 h4:hover::after{
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 
 #ul_p3{
   width: 80%;
@@ -226,45 +203,12 @@ body {
     background-color: rgba(195, 195, 195, 0.5);
     z-index: 2;
     position: absolute;
-    font-size: 1vw;
+    font-size: 2vw;
     border-radius: 20px;
     font-weight: bold;
 }
 
 
-#nav {
-    top: 93%;
-    width: 30%;
-    margin-left: 35%;
-    position: absolute;
-    z-index: 3;
-    font-size: 1.1vw;
-    visibility: hidden;
-}
-
-#nav1{
-  float: left;
-  cursor: pointer;
-  text-align: center;
-}
-
-#nav2{
-  float: right;
-  cursor: pointer;
-  text-align: center;
-}
-
-#nav1:hover{
-  -webkit-animation: shake-bottom 0.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-	animation: shake-bottom 0.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-}
-
-#nav2:hover{
-  -webkit-animation: shake-bottom 0.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-	animation: shake-bottom 0.8s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-}
-
-@-webkit-keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}@keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}
 
 
 #animate-charcter
@@ -286,7 +230,7 @@ body {
   -webkit-text-fill-color: transparent;
   animation: textclip 4s linear infinite;
   display: inline-block;
-  font-size: 2vw;
+  font-size: 5vw;
 }
 
 @keyframes textclip {
@@ -294,6 +238,33 @@ body {
     background-position: 200% center;
   }
 }
+
+
+
+
+
+
+#img1{
+  margin-left: var(--zmp);
+}
+#img2{
+  margin-left: var(--zmp2);
+}
+#img3{
+  margin-left: var(--zmp3);
+}
+#img4{
+  margin-left: var(--zmp4);
+}
+#img5{
+  margin-left: var(--zmp5);
+}
+#img6{
+  margin-left: var(--zmp6);
+}
+
+
+
 
 
 
