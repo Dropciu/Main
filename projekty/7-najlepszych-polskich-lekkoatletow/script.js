@@ -1,8 +1,3 @@
-if(window.innerWidth < 600 || (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))){
-  document.getElementById("info").remove();
-}
-
-
 document.body.setAttribute("ondragstart", "return false");
 document.body.setAttribute("ondrag", "return false");
 
@@ -10,6 +5,56 @@ document.body.setAttribute("ondrag", "return false");
 if(window.location.protocol == "http"){
   document.location = document.URL.replace(/^http:/i, "https:"); 
 }
+
+
+document.getElementById("arrow_up").addEventListener("click", function(){
+  if(window.pageYOffset < 0 && window.pageYOffset > window.innerHeight * 1.1){
+    var poziom = 0;
+  }
+  else if(window.pageYOffset >= window.innerHeight * 1 + 1 && window.pageYOffset < window.innerHeight * 2.2 + 1){
+    var poziom = window.innerHeight;
+  }
+  else if(window.pageYOffset > window.innerHeight * 2 - 1&& window.pageYOffset < window.innerHeight * 5){
+    var poziom = window.innerHeight * 2;
+  }
+  else{
+    var poziom = 0;
+  }
+  
+  window.scroll({
+    top: poziom, 
+    left: 0, 
+    behavior: 'smooth'
+  }); 
+})
+
+
+
+
+document.getElementById("arrow_down").addEventListener("click", function(){
+  if(window.pageYOffset >= 0 && window.pageYOffset < window.innerHeight * 1){
+    var poziom = window.innerHeight;
+    console.log("1")
+  }
+  else if(window.pageYOffset >= window.innerHeight * 1 + 1 && window.pageYOffset < window.innerHeight * 2.2){
+    var poziom = window.innerHeight * 2.2;
+    console.log("2")
+  }
+  else if(window.pageYOffset > window.innerHeight * 2.2 - 1 && window.pageYOffset < window.innerHeight * 5){
+    var poziom = window.innerHeight * 5;
+    console.log("3")
+  }
+  else{
+    var poziom = window.innerHeight * 5;
+  }
+  
+  
+  window.scroll({
+    top: poziom, 
+    left: 0, 
+    behavior: 'smooth'
+  }); 
+})
 
 
 
@@ -27,7 +72,6 @@ window.addEventListener("scroll", function scroll() {
             behavior: 'smooth'
         });
         q = 1;
-        document.getElementById("info").remove();
     }
     else if(window.pageYOffset > window.innerHeight * 1.4 && window.pageYOffset < window.innerHeight * 2 && q == 1){
         window.scroll({
@@ -198,6 +242,12 @@ document.getElementById("link7").addEventListener("click", function(){show_chara
 function show_details(n){
   switch(n){
     case 0: var url = "anita_wlodarczyk.html"; break;
+    case 1: var url = "irena_szewinska.html"; break;
+    case 2: var url = "robert_korzeniowski.html"; break;
+    case 3: var url = "adam_kszczot.html"; break;
+    case 4: var url = "kamila_skolimowska.html"; break;
+    case 5: var url = "bronislaw_malinowski.html"; break;
+    case 6: var url = "jozef_szmidt.html"; break;
   }
 
     var okno = document.createElement("div");
@@ -229,11 +279,18 @@ function show_details(n){
 
 document.querySelector(".AW").addEventListener("click", function(){show_details(0)});
 document.querySelector(".IS").addEventListener("click", function(){show_details(1)});
-document.querySelector(".AK").addEventListener("click", function(){show_details(2)});
-document.querySelector(".KS").addEventListener("click", function(){show_details(3)});
-document.querySelector(".BM").addEventListener("click", function(){show_details(4)});
-document.querySelector(".RK").addEventListener("click", function(){show_details(5)});
+document.querySelector(".RK").addEventListener("click", function(){show_details(2)});
+document.querySelector(".AK").addEventListener("click", function(){show_details(3)});
+document.querySelector(".KS").addEventListener("click", function(){show_details(4)});
+document.querySelector(".BM").addEventListener("click", function(){show_details(5)});
 document.querySelector(".JS").addEventListener("click", function(){show_details(6)});
+document.querySelector(".AWI").addEventListener("click", function(){show_details(0)});
+document.querySelector(".ISI").addEventListener("click", function(){show_details(1)});
+document.querySelector(".RKI").addEventListener("click", function(){show_details(2)});
+document.querySelector(".AKI").addEventListener("click", function(){show_details(3)});
+document.querySelector(".KSI").addEventListener("click", function(){show_details(4)});
+document.querySelector(".BMI").addEventListener("click", function(){show_details(5)});
+document.querySelector(".JSI").addEventListener("click", function(){show_details(6)});
 
 
 let slideIndex = 1;

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  font-family: 'Noto Sans';
+  font-display: swap;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -292,21 +299,7 @@ body {
 	background: #eeefd3;
 }
 
-.flex--wlodarczyk img{
-    margin-right: -15vw;
-}
-.flex--kszczot img{
-    margin-right: -10vw;
-}
-.flex--skolimowska img{
-    margin-right: -20vw;
-}
-.flex--malinowski img{
-    margin-top: -30vh;
-}
-.flex--szmidt img{
-    margin-top: -30vh;
-}
+
 
 .flex__content {
 	margin-left: 60px;
@@ -320,10 +313,11 @@ body {
 	position: absolute;
 	bottom: 20px;
 	right: 5%;
-	max-height: 40vw;
+	max-height: 30vw;
 	opacity: 1;
 	transform: translate3d(0,0,0);
 	transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+  cursor: pointer;
 }
 
 /* Animate-START point */
@@ -449,7 +443,7 @@ body {
   textarea:-webkit-autofill:focus {
     border: 1px solid #6bd4b1;
     -webkit-text-fill-color: #2A293E;
-    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+    box-shadow: 0 0 0px 1000px #f8f4e5 inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
@@ -584,7 +578,7 @@ body {
     z-index: 12;
     position: fixed;
     top: 4vw;
-    right: 2vw;
+    right: 1vw;
     width: 5vw;
     height: 5vw;
     cursor: pointer;
@@ -654,8 +648,8 @@ body {
     top: 2vw;
     right: 2vw;
     left: auto;
-    width: 6vw;
-    height: 6vw;
+    width: 4vw;
+    height: 4vw;
 }
 #background{
   position: fixed;
@@ -688,8 +682,8 @@ body {
 {
   transition: all 0.075s ease-in-out;
   position: absolute;
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -701,7 +695,7 @@ body {
 {
   transition: all 0.075s ease-in-out;
   font: 1em Helvetica, arial;
-  font-size: 3.6vw;
+  font-size: 2.7vw;
   width: 100%;
   height: 100%;
   content:"x";
@@ -715,7 +709,7 @@ body {
 
 .container.zoom_invert:hover:before
 {
-  font-size: 3.6vw;
+  font-size: 2.7vw;
   border-color: #49b9ffba;
 }
 .container.zoom_invert:hover .close_icon.zoom_invert
@@ -729,19 +723,19 @@ body {
 
 .container.zoom_invert:active:before
 {
-  font-size: 3.4vw;
+  font-size: 2.2vw;
   border-color: rgba(0, 38, 255, 0.933);
   color: #ff0000;
 }
 .container.zoom_invert:active .close_icon.zoom_invert
 {
   transition: all 0.05s ease-in-out;
-  font-size: 3.2vw;
+  font-size: 2.4vw;
   border-color: #ff0000;
 }
 .container.zoom_invert:active .close_icon.zoom_invert:after
 {
   transition: all 0.05s ease-in-out;
-  font-size: 3.2vw;
+  font-size: 2.4vw;
   color: #ff0000;
 }
