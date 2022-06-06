@@ -34,15 +34,12 @@ document.getElementById("arrow_up").addEventListener("click", function(){
 document.getElementById("arrow_down").addEventListener("click", function(){
   if(window.pageYOffset >= 0 && window.pageYOffset < window.innerHeight * 1){
     var poziom = window.innerHeight;
-    console.log("1")
   }
   else if(window.pageYOffset >= window.innerHeight * 1 + 1 && window.pageYOffset < window.innerHeight * 2.2){
     var poziom = window.innerHeight * 2.2;
-    console.log("2")
   }
   else if(window.pageYOffset > window.innerHeight * 2.2 - 1 && window.pageYOffset < window.innerHeight * 5){
     var poziom = window.innerHeight * 5;
-    console.log("3")
   }
   else{
     var poziom = window.innerHeight * 5;

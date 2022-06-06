@@ -37,6 +37,14 @@ body {
   visibility: hidden;
 }
 
+
+#nav{
+  display: block;
+  visibility: hidden;
+}
+
+
+
 #background-first{
     width: 100vw;
     height: 100vh;
